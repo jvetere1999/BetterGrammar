@@ -1,0 +1,31 @@
+%! Author = jacobvetere
+%! Date = 7/17/22
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{bettergrammar}
+
+% Document
+\begin{document}
+    \begin{figuregrammar}
+        {$\pmb{f}$}{\textit{Header}}{fun $\pmb{N}$ \{\}}
+        \alt{fun $\pmb{N}$ -> $\pmb{T}$ \{\}}
+    \end{figuregrammar}
+
+    \begin{figuregrammar}
+        {$\pmb{N}$}{\textit{Name}}{$\pmb{l}$($\pmb{l}$ + $\pmb{d}$)*]}
+    \end{figuregrammar}
+
+    \begin{figuregrammar}
+        {$\pub{T}$}{\textit{Type}}{Boolean}
+        \alt{String}
+        \alt{Int}
+        \alt{Float}
+        \alt{Double}
+        \alt{UnsignedInt}
+        \alt{UnsignedDouble}
+    \end{figuregrammar}
+\end{document}

@@ -1,0 +1,29 @@
+%! Package = PACKAGE_NAME
+%! Author = jacobvetere
+%! Date = 7/17/22
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bettergrammar}[2022/07/17 jacobvetere's Package]
+\RequirePackage{mathtools}
+\RequirePackage{listings}
+\RequirePackage{parskip}
+\RequirePackage[sfdefault]{ClearSans} %% option 'sfdefault' activates Clear Sans as the default text f
+\RequirePackage[T1]{fontenc}
+
+
+\newcommand{\var}[1]{#1}
+\newcommand{\ter}[1]{#1}
+
+\newcommand{\alt}[1]{
+    \\| #1
+}
+
+\newenvironment{figuregrammar}[3]{
+    \let\@afterindentfalse\@afterindenttrue % we want \parindent anywhere
+    \chapter{\bibname}%
+    \setlength{\leftskip}{4em}%
+    \setlength{\parindent}{-\leftskip}
+    \fontfamily{pcr}\selectfont
+
+    #1: #2 ::= #3
+}{}
